@@ -8,21 +8,17 @@ const config = {
         filename: 'main.bundle.js'
     },
     module: {
-        rules: [{
-            test: /\.(js|jsx)$/,
-            loader: 'babel-loader',
-            include: [
-                path.resolve(__dirname, 'src'),
-            ],
-            query: {
-                babelrc: false,
-                presets: [
-                    'es2015',
-                    'react',
-                    'stage-0'
-                ],
-            },
-        }, ],
+        rules: [
+            {
+                test: /\.(js|jsx)$/,
+                loader: 'babel-loader',
+                include: [path.resolve(__dirname, 'src')],
+                query: {
+                    babelrc: false,
+                    presets: ['es2015', 'react', 'stage-0']
+                }
+            }
+        ]
     },
     plugins: [
         new webpack.DefinePlugin({
@@ -31,9 +27,7 @@ const config = {
             }
         }),
         new webpack.optimize.UglifyJsPlugin(),
-        new HtmlWebpackPlugin({
-            template: './public/index.html',
-        })
+        new HtmlWebpackPlugin({template: './public/index.html'})
     ]
 };
 module.exports = config;

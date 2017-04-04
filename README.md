@@ -1,5 +1,6 @@
 # <https://docs.npmjs.com/>
 npm -v
+npm init -y
 
 # <https://webpack.js.org/configuration/>
 npm install webpack --save-dev
@@ -20,6 +21,5 @@ npm install react react-dom react-router --save
 # <http://redux.js.org/docs/basics/UsageWithReact.html>
 npm install redux react-redux --save
 
-
-
+# <https://docs.npmjs.com/>
 npm update
